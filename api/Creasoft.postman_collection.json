@@ -1,0 +1,951 @@
+{
+	"info": {
+		"_postman_id": "300ffe37-fbfc-4dfa-9a90-11910f149b50",
+		"name": "Creasoft",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26700043"
+	},
+	"item": [
+		{
+			"name": "Autenticación",
+			"item": [
+				{
+					"name": "Inicio de sesión",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "username",
+									"value": "kento",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "demo",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{Localhost}}/auth/login",
+							"host": [
+								"{{Localhost}}"
+							],
+							"path": [
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Inicio de sesión con éxito",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "username",
+											"value": "kento",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "demo",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{Localhost}}/auth/login",
+									"host": [
+										"{{Localhost}}"
+									],
+									"path": [
+										"auth",
+										"login"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.13"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 16 Mar 2024 05:04:23 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"timestamp\": \"2024-03-16 00:04:23\",\n    \"code\": 200,\n    \"status\": true,\n    \"data\": {\n        \"message\": \"Inicio de sesión exitoso.\",\n        \"detail\": {\n            \"access_token\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvdjEvYXV0aC9sb2dpbiIsImlhdCI6MTcxMDU2NTQ2MywiZXhwIjoxNzE0MTY1NDYzLCJuYmYiOjE3MTA1NjU0NjMsImp0aSI6IkNFcUs0OHE0TUpkcnFOV3giLCJzdWIiOiI2YmQwZDliYy01MjFiLTQ3MzEtOGE0Mi02YzczOTlmOTY0MDAiLCJwcnYiOiJiOTEyNzk5NzhmMTFhYTdiYzU2NzA0ODdmZmYwMWUyMjgyNTNmZTQ4IiwiZW1haWwiOiJrZW50b2xvcnRpZ3VlQGdtYWlsLmNvbSIsInVzZXJuYW1lIjoia2VudG8ifQ.6xKZJyUpTDKt7e0Swp2w5dN3pm5nWG-SXtNG9yakGNU\",\n            \"user\": {\n                \"id\": \"6bd0d9bc-521b-4731-8a42-6c7399f96400\",\n                \"username\": \"kento\",\n                \"avatar\": null,\n                \"dni\": \"71530135\",\n                \"name\": \"Kent\",\n                \"surname\": \"Olortigue Jimenez\",\n                \"email\": \"kentolortigue@gmail.com\",\n                \"cellphone\": \"959653106\",\n                \"birthdate\": \"1999-07-24\",\n                \"email_confirmation\": \"1\",\n                \"idtype_user\": 1,\n                \"status\": \"1\"\n            },\n            \"token_type\": \"bearer\",\n            \"expires_in\": 120000000\n        }\n    }\n}"
+						},
+						{
+							"name": "Error al iniciar sesión",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "username",
+											"value": "kento",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "demot",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{Localhost}}/auth/login",
+									"host": [
+										"{{Localhost}}"
+									],
+									"path": [
+										"auth",
+										"login"
+									]
+								}
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.13"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 16 Mar 2024 05:04:50 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"timestamp\": \"2024-03-16 00:04:50\",\n    \"code\": 401,\n    \"status\": false,\n    \"data\": {\n        \"message\": \"Credenciales incorrectas.\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Refrescar token",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{Localhost}}/auth/refreshToken",
+							"host": [
+								"{{Localhost}}"
+							],
+							"path": [
+								"auth",
+								"refreshToken"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Sesión actualizada con éxito",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{Localhost}}/auth/refreshToken",
+									"host": [
+										"{{Localhost}}"
+									],
+									"path": [
+										"auth",
+										"refreshToken"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.13"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 16 Mar 2024 05:36:59 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"timestamp\": \"2024-03-16 00:36:59\",\n    \"code\": 200,\n    \"status\": true,\n    \"data\": {\n        \"message\": \"Sesión actualizada con éxito.\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Cerrar sesión",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{Localhost}}/auth/logOut",
+							"host": [
+								"{{Localhost}}"
+							],
+							"path": [
+								"auth",
+								"logOut"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Cierre de sesión con éxito",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{Localhost}}/auth/logOut",
+									"host": [
+										"{{Localhost}}"
+									],
+									"path": [
+										"auth",
+										"logOut"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.13"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 16 Mar 2024 05:32:52 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "56"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"timestamp\": \"2024-03-16 00:32:52\",\n    \"code\": 200,\n    \"status\": true,\n    \"data\": {\n        \"message\": \"Sesión cerrada con éxito.\"\n    }\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Clientes",
+			"item": [
+				{
+					"name": "Listar datos de contacto con clientes",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "{{Localhost}}/customers/dataCustomer?initial_date=2024-03-15&final_date=2024-03-19&revision_status=1&status=1&perPage=10&page=1",
+							"host": [
+								"{{Localhost}}"
+							],
+							"path": [
+								"customers",
+								"dataCustomer"
+							],
+							"query": [
+								{
+									"key": "initial_date",
+									"value": "2024-03-15",
+									"description": "Fecha inicial"
+								},
+								{
+									"key": "final_date",
+									"value": "2024-03-19",
+									"description": "Fecha final"
+								},
+								{
+									"key": "revision_status",
+									"value": "1",
+									"description": "0:No contactado, 1:Aceptó oferta, 2:Rechazó oferta, 3:No contesto, 4: Hacer seguimiento"
+								},
+								{
+									"key": "status",
+									"value": "1",
+									"description": "0:Inactivo, 1:Activo, 2:Eliminado"
+								},
+								{
+									"key": "perPage",
+									"value": "10",
+									"description": "Cantidad por página"
+								},
+								{
+									"key": "page",
+									"value": "1",
+									"description": "Página"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Listar datos de contacto con clientes",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": []
+								},
+								"url": {
+									"raw": "{{Localhost}}/customers/dataCustomer?initial_date=2024-03-15&final_date=2024-03-19&revision_status=1&status=1&perPage=10&page=1",
+									"host": [
+										"{{Localhost}}"
+									],
+									"path": [
+										"customers",
+										"dataCustomer"
+									],
+									"query": [
+										{
+											"key": "initial_date",
+											"value": "2024-03-15",
+											"description": "Fecha inicial"
+										},
+										{
+											"key": "final_date",
+											"value": "2024-03-19",
+											"description": "Fecha final"
+										},
+										{
+											"key": "revision_status",
+											"value": "1",
+											"description": "0:No contactado, 1:Aceptó oferta, 2:Rechazó oferta, 3:No contesto, 4: Hacer seguimiento"
+										},
+										{
+											"key": "status",
+											"value": "1",
+											"description": "0:Inactivo, 1:Activo, 2:Eliminado"
+										},
+										{
+											"key": "perPage",
+											"value": "10",
+											"description": "Cantidad por página"
+										},
+										{
+											"key": "page",
+											"value": "1",
+											"description": "Página"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.13"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 16 Mar 2024 08:30:03 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"timestamp\": \"2024-03-16 03:30:03\",\n    \"code\": 200,\n    \"status\": true,\n    \"data\": {\n        \"message\": \"Lectura exitosa.\",\n        \"detail\": [\n            {\n                \"id\": 1,\n                \"cellphone\": \"95653106\",\n                \"dni\": \"71530135\",\n                \"revision_status\": \"1\",\n                \"revision_status_text\": \"Aceptó oferta\",\n                \"created_at\": \"2024-03-16 01:56:07\",\n                \"status\": \"1\",\n                \"status_text\": \"Activo\"\n            }\n        ]\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Datos de contacto",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "cellphone",
+									"value": "95653106",
+									"type": "text"
+								},
+								{
+									"key": "dni",
+									"value": "71530135",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{Localhost}}/customers/dataCustomer",
+							"host": [
+								"{{Localhost}}"
+							],
+							"path": [
+								"customers",
+								"dataCustomer"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Registro exitoso",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "cellphone",
+											"value": "95653106",
+											"type": "text"
+										},
+										{
+											"key": "dni",
+											"value": "71530135",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{Localhost}}/customers/dataCustomer",
+									"host": [
+										"{{Localhost}}"
+									],
+									"path": [
+										"customers",
+										"dataCustomer"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.13"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 16 Mar 2024 06:56:07 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"timestamp\": \"2024-03-16 01:56:07\",\n    \"code\": 200,\n    \"status\": true,\n    \"data\": {\n        \"message\": \"Su información ha sido registrada exitosamente. Estas a un paso de ser parte de nuestra familia.\",\n        \"detail\": {\n            \"cellphone\": \"95653106\",\n            \"dni\": \"71530135\",\n            \"ip\": \"127.0.0.1\",\n            \"id\": 1\n        }\n    }\n}"
+						},
+						{
+							"name": "Data duplicada",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "cellphone",
+											"value": "95653106",
+											"type": "text"
+										},
+										{
+											"key": "dni",
+											"value": "71530135",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{Localhost}}/customers/dataCustomer",
+									"host": [
+										"{{Localhost}}"
+									],
+									"path": [
+										"customers",
+										"dataCustomer"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.13"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 16 Mar 2024 06:55:47 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"timestamp\": \"2024-03-16 01:55:47\",\n    \"code\": 400,\n    \"status\": false,\n    \"data\": {\n        \"message\": \"Su información ha sido registrada exitosamente. Estas a un paso de ser parte de nuestra familia.\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Exportar data",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "initial_date",
+									"value": "2024-03-18",
+									"description": "Fecha inicial",
+									"type": "text"
+								},
+								{
+									"key": "final_date",
+									"value": "2024-03-19",
+									"description": "Fecha final",
+									"type": "text"
+								},
+								{
+									"key": "revision_status",
+									"value": "1",
+									"description": "0:No contactado, 1:Aceptó oferta, 2:Rechazó oferta, 3:No contesto, 4: Hacer seguimiento",
+									"type": "text"
+								},
+								{
+									"key": "status",
+									"value": "1",
+									"description": "0:Inactivo, 1:Activo, 2:Eliminado",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{Localhost}}/customers/dataCustomer/exportData",
+							"host": [
+								"{{Localhost}}"
+							],
+							"path": [
+								"customers",
+								"dataCustomer",
+								"exportData"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Exportar data en excel",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "initial_date",
+											"value": "2024-03-12",
+											"description": "Fecha inicial",
+											"type": "text"
+										},
+										{
+											"key": "final_date",
+											"value": "2024-03-19",
+											"description": "Fecha final",
+											"type": "text"
+										},
+										{
+											"key": "revision_status",
+											"value": "1",
+											"description": "0:No contactado, 1:Aceptó oferta, 2:Rechazó oferta, 3:No contesto, 4: Hacer seguimiento",
+											"type": "text"
+										},
+										{
+											"key": "status",
+											"value": "1",
+											"description": "0:Inactivo, 1:Activo, 2:Eliminado",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{Localhost}}/customers/dataCustomer/exportData",
+									"host": [
+										"{{Localhost}}"
+									],
+									"path": [
+										"customers",
+										"dataCustomer",
+										"exportData"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "xml",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.13"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "public"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 16 Mar 2024 08:32:55 GMT"
+								},
+								{
+									"key": "Last-Modified",
+									"value": "Sat, 16 Mar 2024 08:32:55 GMT"
+								},
+								{
+									"key": "Content-Disposition",
+									"value": "attachment; filename=data_customers.xlsx"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+								},
+								{
+									"key": "Content-Length",
+									"value": "6586"
+								},
+								{
+									"key": "Accept-Ranges",
+									"value": "none"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								}
+							],
+							"cookie": [],
+							"body": "PK\u0003\u0004\u0014\u0000\u0000\b\b\u0000\u001b\u001cpXG�D�Z\u0001\u0000\u0000�\u0004\u0000\u0000\u0013\u0000\u0004\u0000[Content_Types].xmlSV\u0000\u0000���N�0\u0010E�|E�-J��@\b5��\u0012*Q>`�'�UǶl���L����@�nbE�gr=��tW�d�>(k\n6�r��\u0011V*�,���)�cI�`$hk�`{\fl:�\u001a/�\u000eCBb\u0013\nV���9\u000f��\u001aBf\u001d\u001a�RZ_C�W��\u000e�\n��o���\u000bk\"���ƃM�/��Jb2\u0007\u001f��&\f�i\u001e�\r��(#?�\n<t]0pN+\u0001�\n�\u001b#QS[�J��b]�$km�\u001b\u0017~\u0012\u0018�^c\u0018�\n�#�P!�Zg��<�\u0012�:&�;r�2���y�C�\u0019)�=�R����C�u��A�~�aK��\u0013���ջ��K�ެY\r��\u001d:��޺�\t5�\u0000l��(SG���:�^��\u001eχ\u001f��Q��xH��&�v\u0019>X?c���k�*�(_�����}�>���\u000bk�\u0001PK\u0003\u0004\u0014\u0000\u0000\b\b\u0000\u001b\u001cpX\u0017�78�\u0000\u0000\u0000K\u0002\u0000\u0000\u000b\u0000\u0004\u0000_rels/.relsSV\u0000\u0000���j�0\f��{\n�{���1F�^ʠ�2�\u0007�l�$���-}�y��\u0005��Î��O��v�y\u001a�;�؋Ӱ.JP��޵\u001a^��\u0003���Y\u001aű�3G�Ww�g\u001e)���>�\fqQC��D���b!�]�i$L��3���\f�2n��\u001e�o\u0006T\u000b�:Z\r�h����[��4�ი��]��\u0002yN�,ە\u000f�>�>\u000f�j\n-'\rV�)�#��EF\u0003^6��n���8q\"K��H��>_\u0019ׄ����eƏ�<⇄�Ud�v��\rT�PK\u0003\u0004\u0014\u0000\u0000\b\b\u0000\u001b\u001cpX�$�V�\u0000\u0000\u0000�\u0002\u0000\u0000\u001a\u0000\u0004\u0000xl/_rels/workbook.xml.relsSV\u0000\u0000���j�0\u0010D��\n��ZvZJ)�s)�\\[�\u0003���LlIh7m��U\u001bH\u001c\b�\u0007�Ĭؙ�H���8�OL�\u0007��*J\u0010�M���\u0014|4��g\u0010��[=\u0004�\n&$��w�7\u001c4�\u001dr}$�M<)p��EJ2\u000eGME���M\u001bҨ9��ɨ�^w(We�$��\u0003�\u000bO��\n��V �)��C��\u0006_�9���J�$���/\u001a�:d\u0005G]d\u001f���WK�s��s��<\u000e�[\f\u000f�V�tB��)?���\u0016��0_!��!�\u0019�4�E�ǩ\u0019y���\u001fPK\u0003\u0004\u0014\u0000\u0000\b\b\u0000\u001b\u001cpXad���\u0001\u0000\u0000E\u0003\u0000\u0000\u0010\u0000\u0004\u0000docProps/app.xmlSV\u0000\u0000�SAn�0\u0010��\u0015\u0002�1e�(\n�b�:-rhP\u0003v��ZYD(��n\u0004��/%Ê��T�fg\u0007��T���\u0015=&��Wb�(E�ބ��C%\u001e��o>��\u0018|\r.x��\tI��\u000fj�B��\u0016��\u000e�*�2ǵ�dZ�\u0016��s�\t�\u0003�e:��4��]0/\u001dz����$���k�o�d(Ύ��״\u000ef�GO�S�~Z}��Y\u0003�\u000f�\u001f�I�B�ŷ�A�伩��\u000e�K�|ҥ��R�\f8�dc݀#T�P�\b�̶`\u0013i��G�!\u0015d�䩭D�\u001b\b�8��!Y�,βs1b\u0017���\u0015�3��LJN�\b��9�\u001f�r\u0014dp-�S���#�-;���\u0016\u0012��x9O\n    <f\u0010�e|\u0013��?���E�y�rB\u000f�ဃvB?��Ǹ\u000fw�x\u0019�5�v-$��L�0\u0011�>�M.���É�멤M\u000b�����mcx1O�_���E���P.���\u001f@�\u0005PK\u0003\u0004\u0014\u0000\u0000\b\b\u0000\u001b\u001cpX@Z�Fq\u0001\u0000\u0000\u0011\u0003\u0000\u0000\u0011\u0000\u0004\u0000docProps/core.xmlSV\u0000\u0000���N�0\u0010D�|E�{j��\bEi�\u0000�\u0004\u0012R��j�5Ml�ޒ��q�6���S4������;��Op^\u0019='ل�\u0004�0R���<�\u0016�5I\n        <r-ym4�I\u0007��T\u0017���0\u000e����P�O\u0002H�B�9� ڂR/6�p?\t\t\u001d�w�\u001a�A�5�\\l�\u001a蔱+�\u0000rɑ�\u001e�ڑH\u000eH)F�ݹ:\u0002��PC\u0003\u001a=�&\u0019=e\u0011\\��<\u0010�o�Fag����\u001c�{��`۶�6��0F_\u001f\u001f�q�T�*\u0001�*�(�\u0003��U�z�M���A�����Xs����w\u0005��\u001d�\u001d)\u000fk\u000e\u0018�I\u0018�\u0018�9:/���jA�)�^�,O��\u0015ˋ|Z�f)�\u0015��c�AN��p���GJ�\u0002\u0015�\u0010V�_�,m�S�\r\u0000�:\u0006�\u000fJ��)��9V�:�\u0011�߽}���\u001cE�h\u000b]k��Ul���\u001a�[\u001b�\r�\u000fu���/PK\u0003\u0004\u0014\u0000\u0000\b\b\u0000\u001b\u001cpXs�{Y�\u0005\u0000\u0000�\u001b\u0000\u0000\u0013\u0000\u0004\u0000xl/theme/theme1.xmlSV\u0000\u0000�YOo�6\u0014��S\u0010���l)u�:E��햦\r\u0012�C��DK�)Q 餾\r�q��aݰˀ�v\u0018�\u0015h�]�O����\u0001�\n{�c���4i3lC�-������Q�z�A��!\u0011��c9�\u001b\u0016\"��\u0003��\u001d��pp�m!�p\u0012`�\u0013ұfDZ�6?��7TDb��<�\u001b�cEJ�\u001b�-}���2OI\u0002kc.b�`(B;\u0010�\b���n6\u001akv�ib�\u0004����xL}��\u0019Kksμ��+Q2��8�s�:E�\r&N�#g��\u0004:Ĭc���\u001f\r�\u0003e!�������?��y�^\u00101UC��\r�OIW\u0012\u0004�fN'�т�\u0019��W�\u0017��\u0005�U\\�����\u0005�\u001c�}\u001f,uV���t�\n            <5P�ʻ��\u001an\u0015��o��׻ݮ�^���xw\u0005�n��[�\n�]�U��[��Z\u0005�-�k+����5���A\u0011��d\u0005��s\u0011�\u0005d��\r#�\r��|\u0003,Q���\n�D���\u0018��b\u0000�<�X�\u0004�YJ��\u0007\\\u000f�#Aq&\u0000o\u0010��\u0014S�\\��d!�\u000b����Q�!#��W�x��)z�����g�\u000f>~����O\u0006�\u001b8\tu�}��7��?�~���f�����鯿|a\u0006*\u001d��'�?{��������\u0001�%�H�\u000fiL$�E��>��6�\u00002\u0012�\u0018F�V(p\u0004H\u0003���\n��\f3\u0013�K�λ+�\u0000��ק�+�\u001eDb��\u0001�\u0013�\u0015�.�˅ќ�L�n�4\t���T��c|h��;\u0011��4��LM,{\u0011���� �8$\tQ([�\u0013B\fd�(��u���K>V�\u001eE]L�.\u0019ґ2\u0013ݠ1�efR\u0010B]���]����~�\u001cV��\u0010��X\u0012Vq�u\n                <U86j�c�#ob\u0015��<�\t��p� �!a\u001c�\u0003\"��涘U���P��a�e���\u0014�NLț�s\u001d��'�\bǩQg�D:�C9�-��\u001eWF%x5C�1�\u0001'��K�:_Zߡad� ��T�R��j>��\u0018����J\u001d�䴲�(���e{\u000e߂C̔<'�u\u001d�X���4�#�\u0015�+��\n�.V�\\����,Ŷ�k�l���{L\u0019;P3Fnʼ�K0/\u0018�d>ȉ\u0016}~\u001a�c)��\u000b\u0005Ο���c���\b� ��%��d\u001dJ�r\t�\u000b��w~E�`s>���j�\u0007�tK�o.��P�Z\u0019��\nk]y;aN\u0001<�4�3K�N�fkބ�A8{��5\u000bѰQ0#A����<,\u0017\u001e\"\u0019န1r��8�3���z�i��[o'�,A�Ź5�\u000b�Rc%J�j:��:BG����,��c����8\u0005~2+U��I��Ui�k�����m�4j\r��H�T�XF\u0005U�4\u001d�,�ozn懋1�P�ΦE����Z�'CK�c⫚��\\�SE�A\u0014\u001c�\u0011��}\fz���\n����9\u001f\b�P��x��/���k�2;0K#\\֤�\u0016�\u0002�?/t�G�zv��ohJ�\u0002M��]S��\u000b\rn+ȯ^�\u0006\b��=ڱ�P\u0011�*�F�\u001f\bh\u001crY�\u0017���TB,{���J\u000e�u��Q\u0014�0R�4D�B�S� dO�v�������9���,ԕi�;\"��\r��]��P4�&�#r�ɠ٦�\u001a���p���t>��\u0007KA�yz\u0011W+��Q��v*��m�-nzg>jS����\u000b\n7\u0015>[��C�\u000f�G��\u0012�F��.�o19\u0002�ۚq\u0019���Z��]\u0013�l>5g�j�}��7w�g�w����\u0014���L>Z�3����m�\u001fM���{�\u0007p)����\u0000>��t�oPK\u0003\u0004\u0014\u0000\u0000\b\b\u0000\u001b\u001cpX�����\u0000\u0000\u0000�\u0001\u0000\u0000\u0014\u0000\u0004\u0000xl/sharedStrings.xmlSV\u0000\u0000mP=N�0\u0014�9��=��B@��\n\u0001�X:�\u0003X�Kb)y\u000e~N\u0004Gb��H.�+\u0010C����\u001f�{\u001bz6�'���Fr\u0006X��b[��>�㌂���\u000e���@|��\u0014Q`1�T�.��\u0010��\u000e\u0006C\u001b7\u0002F�q~0!B�\n\u001a=��:�0�\"�2\u0017���ل�u�\u00077a��%׊�VA\u001f�>�\bZ�3����/\u001f�C�\u0016\u001e\u000f�k�)n\\;V\u0003�0[��\tז=T�9;�\u001e����\u0005\u0004o��z_�\u0018�\u0013s\r�`�j&��Dn�4g2-n�B�^\u0016\u0004;_\f�\u000bn�\t��r�\rPK\u0003\u0004\u0014\u0000\u0000\b\b\u0000\u001b\u001cpX\u001bNY{�\u0001\u0000\u0000m\u0005\u0000\u0000\r\u0000\u0004\u0000xl/styles.xmlSV\u0000\u0000�TM�� \u0010��W �]lWm�+۫n��z��f�^�=vP��\u0000Gq}�8�P\u00135�r��cx3\u0003\f��Ipt\u0004m��\u0019��\"�@V�f���۾x���T֔+\t\u0019\u001e����]j����\u0000`�Sx0\u001d��j���>\u0002��4\u0019>X�=\u0010b�\u0003\bj�T\u0007ҭ4J\u000bj��[b�\u001eZ\u001b�$8I��\u0013\u0011�I���\u0017��\u0006U��6�\u0011&y�(�0\t\u000eD���H���V�X�~���\u0003���q�w���[��J#ݖ\u0019.�h\u001c��TL\u0012;�Y��'I\b�\t\u001f����d\\\u001a���X>�@�iG�\u0005-\u000bg�\t�\u000e�\u0004H���w��\u0010'\u001fo�`\u0014g�Ϣݭk���{~~�2�\u0005�Ҝ�����T�v/�\\g��T�rh�ۮY{�U����U��VI�}��\t8�\n8���g��>5(\n                    <�o��>���\f]B\u0013\f2���k����M���[r\u001b�>�]ǇB�v\b�K/J���Q+\u001f'�XO��b嬕\u0002殺�R|%��zJ�\r)�7�D��[]��rf\u0016��������RG�3n��p1N�>5����}g!J\r\r����T�\u0017�\u001dj֋/����\u001d���F���MM��2�\u0003PK\u0003\u0004\u0014\u0000\u0000\b\b\u0000\u001b\u001cpXJY(ȫ\u0001\u0000\u0000�\u0002\u0000\u0000\u000f\u0000\u0004\u0000xl/workbook.xmlSV\u0000\u0000�R�N�@\u0010}�WX�^l\u0010�6��T \u0014�\u0017TRx���x�޴�N����:i)O�e�������ɚj��ɻV\u001d\u001e4�B�}G�U�Wˏ�T�\t\\\u0007�;l�3�:[|�o}|\\{�XI��\u0003h񅈌q�*��[5�\u0014fu�z@\u000b|�\u0003:��>ZH\u0002�C͒\u0003\u001d\u000f�ɚ��iNk\u000b�v\u0015f�=5|ߓ�\u000b�G�.ME\"\u001aH�\u0012\u000f\u0014X-�=\u0019���� �\u001f`e�'�*\u0003�.;Jص�X���D\u001c×�L\u0006'͉�\u00177����S��@|�s�l�\b��/>�\nt�\r�`�*Q\u001a��d\u0012�\u000bHx\u0015�\u0018��)�\"bO��m��\u0004[rd�%�Ճa\t��o��H/�%0�:zc���Wr�\u0017�&E�D�mx���,X�N\u001b�!�5\u0019Jϭ*o�y���Z�f{[��BV���J̵�z(\u001a�H\u001e�;.E��\u001d���\u0002��2�Κ��y�˧\n�.:�*�5�so��r\"\u0019�\u001f�9\u0017����a�(�����L�?��\u000fPK\u0003\u0004\u0014\u0000\u0000\b\b\u0000\u001b\u001cpX��]|�\u0003\u0000\u0000^\n\u0000\u0000\u0018\u0000\u0004\u0000xl/worksheets/sheet1.xmlSV\u0000\u0000�V�n�0\u0010��+\u0004�km�S\u001b��fq[�E�$mϴ4��P�JR�ӯ\u0014yA�.98��ͼ�����d�\u0006�����h\u0010�\u001e�Td��������w��4�\u0019a���\u0006�_��m�|R\u0005��\u0010`�*�����@n�7J��~�u5\r\u0002�\u0016P\u00125\u0010\u0015p��B�D�(ׁ�\u0018�Y��\u0005q\u0018���P�\u0010��\u001c\f��4�k��%p݀H`D#'U�J�h��,�L�-�o��x�X:�hx�W�T\n%r=HE�J;f9\t&{\n                    <w�y@�K�D���\u001c^%�Ou�\u0016�*�͊2��-�����\u000bIV\f�\u0011y��G�\u001cßO\u0013�\u00163������5�\u001c�\u0012\u000bz�\u0004&�8y~����B\u001bE��\u0005]\\Fqo͐z\u0012��!�.\u0013�a\u001d�Sت���d�\u0000\fR\r��6Ӻ\u0012��\u0018?�\n�\\\u0015b�Q��\u000bV���e\r��^l�\u0004��D�T�h\u0004�X&9�\u001b�\u0002�L\r\u0018�+�W�I�_��-�f �\frR3��>��;\u001c\f}�u�\u000bl�ݛ���:,��0Q*���^I��X�]Õf����`\u0018��]��K�[�i��(4.��~6{ޢ6x�Ë;�(\u001c�Ɠ�\u0006L\u001c`�\u0000�\u000ep�\u0001���\u001f\u0018�\u001c��\u0005ϴ0�k��\u0003\u001c�0�@�\u0017\n\u00184[��?D��L��'�#S\u0011s�F�1Nij�v(�\r�\u0015j7�p\u0016l\f��<���=��=�}��c�d����c��<�\u0018u\u001e\u0001r��'�ƧJ�l���x�D���Wc��FI\u0018%�\u0003Jq��������F���4��$��Tg/\u001b���\u001d\u0010H^#��B�o;\u0000]&�\u0010\bzcWI��me_Uo�ru�)��N�\u0000�h��Vd\r_�\\S�a��%\u001c�\u0011�ͭg�ZTv�'o%4\u001e�V*�\u001dl$,1\u0017B����Du�U�\u0002�@��%!)~\u0003ا�k\u0016��\u0012s��\u0010�Ӝ�G�]�Nv�\u000fE\u0003|+m�Ll�c\u0001�\u0016��LΦ��-��h���\\�Yv�\u0001���3,�T�S�\u0012~P]�wJ{�\t�knt�CN��d�5\u000f\u0010�@o��&{�n��2�ν/�u\u0017�\u0017rSZ\u0017�'Y�\u000bڗ�\rX̴�X�#R+/\u00155��}�}\u001a.~\u0003PK\u0003\u0004\u0014\u0000\u0000\b\b\u0000\u001b\u001cpX�KR\"x\u0000\u0000\u0000�\u0000\u0000\u0000#\u0000\u0004\u0000xl/worksheets/_rels/sheet1.xml.relsSV\u0000\u0000M�1\u000e\u0002!\u0010\u0000{_A��@\u000bc�q��\u0000�\u000f�p+\u0010a!,1�{)-'��y����$\u0016�p�\f(bW�����~ݟAIG�0\u0015&\u000b_\u0012X��|��}4\u0012b\u00155&,\u0016B�����@\u0019e*�x�gi\u0019���uE�BO�h�I��\u0007��\u0007PK\u0001\u0002\u0003\u0006\u0014\u0000\u0000\b\b\u0000\u001b\u001cpXG�D�Z\u0001\u0000\u0000�\u0004\u0000\u0000\u0013\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000 \u0000\u0000\u0000\u0000\u0000\u0000\u0000[Content_Types].xmlPK\u0001\u0002\u0003\u0006\u0014\u0000\u0000\b\b\u0000\u001b\u001cpX\u0017�78�\u0000\u0000\u0000K\u0002\u0000\u0000\u000b\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000 \u0000\u0000\u0000�\u0001\u0000\u0000_rels/.relsPK\u0001\u0002\u0003\u0006\u0014\u0000\u0000\b\b\u0000\u001b\u001cpX�$�V�\u0000\u0000\u0000�\u0002\u0000\u0000\u001a\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000 \u0000\u0000\u0000�\u0002\u0000\u0000xl/_rels/workbook.xml.relsPK\u0001\u0002\u0003\u0006\u0014\u0000\u0000\b\b\u0000\u001b\u001cpXad���\u0001\u0000\u0000E\u0003\u0000\u0000\u0010\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000 \u0000\u0000\u0000�\u0003\u0000\u0000docProps/app.xmlPK\u0001\u0002\u0003\u0006\u0014\u0000\u0000\b\b\u0000\u001b\u001cpX@Z�Fq\u0001\u0000\u0000\u0011\u0003\u0000\u0000\u0011\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000 \u0000\u0000\u0000�\u0005\u0000\u0000docProps/core.xmlPK\u0001\u0002\u0003\u0006\u0014\u0000\u0000\b\b\u0000\u001b\u001cpXs�{Y�\u0005\u0000\u0000�\u001b\u0000\u0000\u0013\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000 \u0000\u0000\u0000&\u0007\u0000\u0000xl/theme/theme1.xmlPK\u0001\u0002\u0003\u0006\u0014\u0000\u0000\b\b\u0000\u001b\u001cpX�����\u0000\u0000\u0000�\u0001\u0000\u0000\u0014\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000 \u0000\u0000\u0000\u0016\r\u0000\u0000xl/sharedStrings.xmlPK\u0001\u0002\u0003\u0006\u0014\u0000\u0000\b\b\u0000\u001b\u001cpX\u001bNY{�\u0001\u0000\u0000m\u0005\u0000\u0000\r\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000 \u0000\u0000\u0000@\u000e\u0000\u0000xl/styles.xmlPK\u0001\u0002\u0003\u0006\u0014\u0000\u0000\b\b\u0000\u001b\u001cpXJY(ȫ\u0001\u0000\u0000�\u0002\u0000\u0000\u000f\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000 \u0000\u0000\u0000k\u0010\u0000\u0000xl/workbook.xmlPK\u0001\u0002\u0003\u0006\u0014\u0000\u0000\b\b\u0000\u001b\u001cpX��]|�\u0003\u0000\u0000^\n\u0000\u0000\u0018\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000 \u0000\u0000\u0000G\u0012\u0000\u0000xl/worksheets/sheet1.xmlPK\u0001\u0002\u0003\u0006\u0014\u0000\u0000\b\b\u0000\u001b\u001cpX�KR\"x\u0000\u0000\u0000�\u0000\u0000\u0000#\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000 \u0000\u0000\u0000\u0016\u0016\u0000\u0000xl/worksheets/_rels/sheet1.xml.relsPK\u0005\u0006\u0000\u0000\u0000\u0000\u000b\u0000\u000b\u0000�\u0002\u0000\u0000�\u0016\u0000\u0000\u0000\u0000"
+						},
+						{
+							"name": "Sin data por exportar",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "initial_date",
+											"value": "2024-03-18",
+											"description": "Fecha inicial",
+											"type": "text"
+										},
+										{
+											"key": "final_date",
+											"value": "2024-03-19",
+											"description": "Fecha final",
+											"type": "text"
+										},
+										{
+											"key": "revision_status",
+											"value": "1",
+											"description": "0:No contactado, 1:Aceptó oferta, 2:Rechazó oferta, 3:No contesto, 4: Hacer seguimiento",
+											"type": "text"
+										},
+										{
+											"key": "status",
+											"value": "1",
+											"description": "0:Inactivo, 1:Activo, 2:Eliminado",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{Localhost}}/customers/dataCustomer/exportData",
+									"host": [
+										"{{Localhost}}"
+									],
+									"path": [
+										"customers",
+										"dataCustomer",
+										"exportData"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.13"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 16 Mar 2024 08:34:25 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"timestamp\": \"2024-03-16 03:34:25\",\n    \"code\": 400,\n    \"status\": false,\n    \"data\": {\n        \"message\": \"No hay datos para exportar.\"\n    }\n}"
+						}
+					]
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvdjEvYXV0aC9sb2dpbiIsImlhdCI6MTcxMDU2OTk0NCwiZXhwIjoxNzE0MTY5OTQ0LCJuYmYiOjE3MTA1Njk5NDQsImp0aSI6IjJpNVZHU243M3Y1QjA4YTEiLCJzdWIiOiI2YmQwZDliYy01MjFiLTQ3MzEtOGE0Mi02YzczOTlmOTY0MDAiLCJwcnYiOiJiOTEyNzk5NzhmMTFhYTdiYzU2NzA0ODdmZmYwMWUyMjgyNTNmZTQ4IiwiZW1haWwiOiJrZW50b2xvcnRpZ3VlQGdtYWlsLmNvbSIsInVzZXJuYW1lIjoia2VudG8ifQ.MXykETlYGA96ECCbeZjNs7Rt_v8CsFOl_rq19w3rT0U",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "Localhost",
+			"value": "http://127.0.0.1:8000/v1",
+			"type": "string"
+		}
+	]
+}
