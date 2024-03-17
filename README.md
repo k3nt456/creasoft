@@ -5,7 +5,7 @@ Proyecto de prueba técnica
 ## BACK-END
 `creasoft/back-end/creasoft-app`
 
-Las API se generaron utilizando Laravel en su versión estable 10 con PHP 8.1.
+Las API se generaron utilizando Laravel en su versión estable 10 con PHP 8.2.13
 
 ### Librerías utilizadas:
 * [laravel-make-service](https://github.com/getsolaris/laravel-make-service): Para la generación automática de servicios.
