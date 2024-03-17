@@ -1,0 +1,376 @@
+/* Reset de estilos */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Estilo de fuente */
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif,
+    sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+/* Estilos del navbar */
+.navbar {
+  background-color: #333;
+  padding: 10px 20px;
+  color: #fff;
+}
+
+.navbar .container {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.navbar .btn-login {
+  color: #fff;
+  text-decoration: none;
+  padding: 5px 10px;
+  border: 2px solid #fff;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.navbar .btn-login:hover {
+  background-color: #fff;
+  color: #333;
+}
+
+.container-carousel {
+  position: relative;
+  width: 100%;
+  height: 30vw;
+  background-color: #e0e0e0;
+  overflow: hidden;
+}
+
+.carruseles {
+  width: 400%;
+  display: flex;
+}
+
+.slider-section {
+  width: calc(100% / 4);
+}
+
+.slider-section img {
+  width: 100%;
+  height: 30vw;
+  object-fit: cover;
+}
+
+.btn-left,
+.btn-right {
+  display: flex;
+  position: absolute;
+  top: 50%;
+  font-size: 1.5rem;
+  background-color: transparent;
+  border-radius: 50%;
+  padding: 5px;
+  font-weight: 600;
+  cursor: pointer;
+  color: #ffffff81;
+  transform: translate(0, -50%);
+  transition: 0.5s ease;
+  user-select: none;
+}
+
+.btn-left:hover,
+.btn-right:hover {
+  background-color: #f7f7f7;
+  color: #fff;
+}
+
+.btn-left {
+  left: 10px;
+}
+
+.btn-right {
+  right: 10px;
+}
+
+/* Parte del formulario y banner */
+.slider-section {
+  display: flex;
+}
+
+.form-container {
+  flex: 1;
+  margin: 6rem 1rem 6rem 25rem;
+  padding: 1rem;
+  background-color: #fffffff6;
+  border-radius: 20px;
+  max-width: 19%;
+  max-height: 70%;
+  box-shadow: 3px 3px 3px #f86e38c2;
+}
+
+.promo-info {
+  text-align: center;
+  font-size: 1rem;
+  margin: auto;
+  margin-bottom: 15px;
+}
+
+/* Efecto de texto con sombra en relieve */
+.promo-info h2 {
+  order: 2;
+  color: #ff6600;
+  font-weight: 900;
+  text-transform: uppercase;
+  font-size: clamp(1.5rem, 2vw, 2rem);
+  line-height: 0.75em;
+  text-align: center;
+  text-shadow: 3px 1px 1px #f7d19f, 2px 2px 1px #f5aa79, 4px 2px 1px #f7d19f,
+    3px 3px 1px #f5aa79, 5px 3px 1px #f7d19f, 4px 4px 1px #f5aa79,
+    6px 4px 1px #f7d19f, 5px 5px 1px #f5aa79, 7px 5px 1px #f7d19f,
+    6px 6px 1px #f5aa79, 8px 6px 1px #f7d19f, 7px 7px 1px #f5aa79,
+    9px 7px 1px #f7d19f;
+  letter-spacing: 1px;
+  padding: auto;
+  margin: 20px auto;
+}
+
+.form-group input[type="text"] {
+  text-align: center;
+  width: 80%;
+  height: 5vh;
+  padding: 5px;
+  border-radius: 30px;
+  border: 1px solid #ccc;
+  display: block;
+  margin: 5px auto;
+  box-shadow: 3px 3px 3px #221f1e63;
+  margin-bottom: 5px;
+}
+
+.form-group label a {
+  text-decoration: none;
+  color: #ff6600;
+  margin-left: 5px;
+}
+
+.form-group input[type="checkbox"] {
+  flex: 0 0 4%;
+  margin-right: 5px;
+  display: inline-block;
+  vertical-align: middle;
+  padding: 5px;
+}
+
+.form-group label {
+  display: flex;
+  padding-top: 20px;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+  align-items: center;
+}
+
+button[type="submit"] {
+  background-color: #ff6600;
+  font-size: 1vw;
+  color: white;
+  margin: 0 auto;
+  padding: 10px;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  display: block;
+  width: 60%;
+}
+
+.banner {
+  display: flex;
+  margin: auto;
+  padding: auto;
+  text-align: center;
+}
+
+.cambiate {
+  color: #ff6600;
+  font-size: clamp(1.5rem, 2vw, 2rem);
+  border-radius: 20px;
+  background-color: white;
+  padding: 10px 20px;
+  display: inline-block;
+  font-weight: bold;
+  font-style: italic;
+  padding: 3px 35px;
+  margin-bottom: 20px;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.3);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+.internet-1 {
+  color: #ffffff;
+  background: linear-gradient(to top, #ff6600ee 50% 50%, #ff660000 50%);
+  padding: 0px 60px;
+  font-size: 100px;
+  font-weight: bold;
+  font-style: italic;
+  margin-bottom: -55px;
+  margin-top: 0px;
+  border-radius: 12px;
+}
+
+.internet-2 {
+  color: #fafafa;
+  background: linear-gradient(to bottom, #ff6600ee 50% 50%, #ff660000 50%);
+  padding: 0px 60px;
+  font-size: 100px;
+  font-weight: bold;
+  font-style: italic;
+  margin-bottom: 5px;
+  margin-top: 0px;
+  border-radius: 12px;
+}
+
+.promo-link {
+  color: #ff6600;
+  border-radius: 12px;
+  background-color: white;
+  padding: 10px;
+  display: inline-block;
+  font-size: 15px;
+  font-weight: bold;
+  padding: 3px 35px;
+  margin-bottom: 20px;
+  text-decoration: none;
+}
+
+@media screen and (max-width: 480px) {
+  .slider-section {
+    width: 100%;
+    /* 1 slider por fila en pantallas pequeñas */
+  }
+}
+
+/* Al reducir el tamaño el segundo div desaparecerá y solo quedará el formulario */
+@media screen and (max-width: 1600px) {
+  .form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 3vw 10vw 10vw 10vw;
+    padding: 1vw;
+    background-color: #ffffff00;
+    border-radius: 20px;
+    max-width: 100%;
+    max-height: 100%;
+    box-shadow: 3px 3px 3px #f86e3800;
+  }
+
+  .promo-info {
+    text-align: center;
+    padding: 1vw;
+    margin: auto;
+    margin-bottom: 1vw;
+  }
+
+  .promo-info h2 {
+    order: 2;
+    color: #ff6600;
+    font-weight: 900vw;
+    text-transform: uppercase;
+    font-size: clamp(1.5rem, 2vw, 2rem);
+    line-height: 0.75em;
+    text-align: center;
+    text-shadow: 3px 1px 1px #f7d19f, 2px 2px 1px #f5aa79, 4px 2px 1px #f7d19f,
+      3px 3px 1px #f5aa79, 5px 3px 1px #f7d19f, 4px 4px 1px #f5aa79,
+      6px 4px 1px #f7d19f, 5px 5px 1px #f5aa79, 7px 5px 1px #f7d19f,
+      6px 6px 1px #f5aa79, 8px 6px 1px #f7d19f, 7px 7px 1px #f5aa79,
+      9px 7px 1px #f7d19f;
+    letter-spacing: 1px;
+    padding: auto;
+    margin: 1vw auto;
+  }
+
+  /* Estilo para los inputs */
+  .form-group input[type="text"] {
+    text-align: center;
+    width: 80%;
+    height: 4vw;
+    padding: 1vw;
+    border-radius: 30px;
+    border: 1px solid #ccc;
+    display: block;
+    margin: 1vw auto;
+    box-shadow: 3px 3px 3px #221f1e63;
+    margin-bottom: 5px;
+    position: relative;
+    /* Ajustamos posición para centrar */
+  }
+
+  /* Estilo para los placeholders */
+  .form-group input[type="text"]::placeholder {
+    font-size: 0.8em;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .form-group label a {
+    text-decoration: none;
+    color: #ff6600;
+    margin-left: 1vw;
+  }
+
+  .form-group input[type="checkbox"] {
+    flex: 0 0 4%;
+    margin-right: 1vw;
+    display: inline-block;
+    vertical-align: middle;
+    padding: 1vw;
+  }
+
+  .form-group label {
+    display: flex;
+    padding-top: 1vw;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2vw;
+    align-items: center;
+  }
+
+  button[type="submit"] {
+    background-color: #ff6600;
+    font-size: 3vw;
+    color: white;
+    margin: 0 auto;
+    padding: 1vw;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    display: block;
+    width: 20vw;
+  }
+
+  /* Ocultar */
+  .banner {
+    display: none;
+  }
+
+  .promo-info p {
+    display: none;
+  }
+}

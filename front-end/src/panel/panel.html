@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Panel</title>
+    <script src="https://kit.fontawesome.com/66aa7c98b3.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./panel.css" />
+</head>
+
+<body>
+    <!-- Navbar con botón de cierre de sesión -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-title">
+                Username
+            </div>
+            <a href="../autentication/login.html" class="btn-logout">Cerrar sesión 🌐</a>
+        </div>
+    </nav>
+
+    <!-- Tabla de posibles clientes -->
+    <div class="container">
+        <h2>Potenciales clientes</h2>
+        <form id="paginationForm">
+            <label for="initialDate">Fecha inicial:</label>
+            <input type="date" id="initialDate" name="initialDate" value="" max="" required>
+            <label for="finalDate">Fecha final:</label>
+            <input type="date" id="finalDate" name="finalDate" value="" max="" required>
+            <label for="perPage">Registros por página:</label>
+            <select id="perPage" name="perPage">
+                <option value="5">5</option>
+                <option value="10" selected>10</option>
+                <option value="20">20</option>
+                <option value="30">30</option>
+            </select>
+            <label for="page">Página:</label>
+            <input type="number" id="page" name="page" min="1" value="1" style="width: 3rem;">
+            <button type="submit" style="background-color: transparent; border: none; cursor: pointer;" title="Refrescar información">
+                <span style="font-size: 20px; color: aqua;">🔃</span>
+            </button>
+        </form>
+        <div id="pagination"></div>
+        <button id="exportButton">Exportar a Excel ➡️</button>
+        <div id="customerTable"></div>
+    </div>
+
+    <script src="./panel.js"></script>
+</body>
+
+</html>

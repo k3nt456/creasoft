@@ -41,7 +41,15 @@ class DataCustomer extends Model
         #Filtro de fechas
         $query->when(
             request('initial_date') && request('final_date'),
-            fn ($query) => $query->whereBetween('created_at', [request('initial_date'), request('final_date')])
+            function ($query) {
+                return $query->where(function ($query) {
+                    $initialDate = request('initial_date');
+                    $finalDate = request('final_date');
+                    return $query->whereBetween('created_at', [$initialDate, $finalDate])
+                                 ->orWhereDate('created_at', $initialDate)
+                                 ->orWhereDate('created_at', $finalDate);
+                });
+            }
         );
 
         #Filtro de estado de revisión

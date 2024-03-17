@@ -31,7 +31,7 @@ class DataCustomersResource extends JsonResource
                 break;
         }
 
-        switch ($this->revision_status) {
+        switch ($this->status) {
             case 0:
                 $statusText = 'Inactivo';
                 break;

@@ -19,8 +19,8 @@ class DataCustomerStoreRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'cellphone' => ['required', 'integer', 'digits_between:1,9'],
-            'dni'       => ['required', 'integer', 'digits_between:1,8'],
+            'cellphone' => ['required', 'integer', 'digits:9'],
+            'dni'       => ['required', 'integer', 'digits:8'],
         ];
     }
 

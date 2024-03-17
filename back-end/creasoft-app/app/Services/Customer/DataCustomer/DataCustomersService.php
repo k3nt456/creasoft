@@ -59,7 +59,7 @@ class DataCustomersService
             ->active()
             ->first();
 
-        if ($dataCustomer) return $this->errorResponse('Su información ha sido registrada exitosamente. Estas a un paso de ser parte de nuestra familia.', 400);
+        if ($dataCustomer) return $this->errorResponse('Su información ha sido registrada exitosamente. Estas a un paso de ser parte de nuestra familia.', 200);
 
         return $this->successResponse('OK');
     }
