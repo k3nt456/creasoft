@@ -353,7 +353,7 @@
 							"urlencoded": []
 						},
 						"url": {
-							"raw": "{{Localhost}}/customers/dataCustomer?initial_date=2024-03-15&final_date=2024-03-19&revision_status=1&status=1&perPage=10&page=1",
+							"raw": "{{Localhost}}/customers/dataCustomer?initial_date=2024-03-18&final_date=2024-03-20&revision_status=0&status=1&perPage=10&page=1",
 							"host": [
 								"{{Localhost}}"
 							],
@@ -364,17 +364,17 @@
 							"query": [
 								{
 									"key": "initial_date",
-									"value": "2024-03-15",
+									"value": "2024-03-18",
 									"description": "Fecha inicial"
 								},
 								{
 									"key": "final_date",
-									"value": "2024-03-19",
+									"value": "2024-03-20",
 									"description": "Fecha final"
 								},
 								{
 									"key": "revision_status",
-									"value": "1",
+									"value": "0",
 									"description": "0:No contactado, 1:Aceptó oferta, 2:Rechazó oferta, 3:No contesto, 4: Hacer seguimiento"
 								},
 								{
@@ -503,7 +503,7 @@
 							"urlencoded": [
 								{
 									"key": "cellphone",
-									"value": "95653106",
+									"value": "959653106",
 									"type": "text"
 								},
 								{
@@ -914,7 +914,7 @@
 		"bearer": [
 			{
 				"key": "token",
-				"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvdjEvYXV0aC9sb2dpbiIsImlhdCI6MTcxMDU2OTk0NCwiZXhwIjoxNzE0MTY5OTQ0LCJuYmYiOjE3MTA1Njk5NDQsImp0aSI6IjJpNVZHU243M3Y1QjA4YTEiLCJzdWIiOiI2YmQwZDliYy01MjFiLTQ3MzEtOGE0Mi02YzczOTlmOTY0MDAiLCJwcnYiOiJiOTEyNzk5NzhmMTFhYTdiYzU2NzA0ODdmZmYwMWUyMjgyNTNmZTQ4IiwiZW1haWwiOiJrZW50b2xvcnRpZ3VlQGdtYWlsLmNvbSIsInVzZXJuYW1lIjoia2VudG8ifQ.MXykETlYGA96ECCbeZjNs7Rt_v8CsFOl_rq19w3rT0U",
+				"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvdjEvYXV0aC9sb2dpbiIsImlhdCI6MTcxMDY1MTM0NiwiZXhwIjoxNzE0MjUxMzQ2LCJuYmYiOjE3MTA2NTEzNDYsImp0aSI6ImhkaUFzejJHb2s0T09tR2EiLCJzdWIiOiI2YmQwZDliYy01MjFiLTQ3MzEtOGE0Mi02YzczOTlmOTY0MDAiLCJwcnYiOiJiOTEyNzk5NzhmMTFhYTdiYzU2NzA0ODdmZmYwMWUyMjgyNTNmZTQ4IiwiZW1haWwiOiJrZW50b2xvcnRpZ3VlQGdtYWlsLmNvbSIsInVzZXJuYW1lIjoia2VudG8ifQ.SzWW_HtHhp7529LiRAd4H0F63nEJuz-KaVF3L6T1wEc",
 				"type": "string"
 			}
 		]
