@@ -29,6 +29,9 @@ Se incluye una semilla para la inicialización del proyecto. Las credenciales ge
 Se accede a las rutas con el prefijo _v1_, configurado en los CORS. Este prefijo se define desde RouteServiceProvider.
 
 ### Notas adicionales:
+- `composer i` Para instalar las dependencias.
+- Copiar el env.example en un archivo .env para colocar sus variables de entorno locales.
+- `php artisan migrate --seed` Para tener toda la estructura de la base de datos y semillas iniciales.
 - Los formularios están almacenados en la tabla `tbl_data_customer`.
 - Las exportaciones de datos del formulario se guardan en `tbl_data_customer_exports`.
 - Los usuarios se encuentran en la tabla `tbl_user`.
