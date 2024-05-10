@@ -1,6 +1,6 @@
 
 # CREASOFT
-Proyecto de prueba técnica
+Proyecto de contactos para ofertas
 
 ## BACK-END
 `creasoft/back-end/creasoft-app`
